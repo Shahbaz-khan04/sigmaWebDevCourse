@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Element selector */
+        div {
+            background-color: green;
+        }
+        /* class Selector */
+        .red {
+            background-color: red;
+        }
+        .purple {
+            background-color: purple;
+        }
+        /* Id Selector */
+        #blue {
+            background-color: blue;
+        }
+        /* Child Selector */
+        div > p {
+            color: white;
+        }
+        /* Decendent Selector */
+        div p {
+            color: aqua;
+        }
+        /* Universal Selector  */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* Pseudo Selector */
+        a:visited{
+            color: yellow;
+        }
+        a:link{
+            color: brown;
+        }
+        a:active{
+            background-color: rgb(250, 57, 147);
+        }
+        a:hover{
+            background-color: brown;
+        }
+        span:first-child{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="red">
+        This is div
+        <p>This is para</p> <!-- Decendent Selector overrides child selector   -->
+    </div>
+    <div>
+        This is div
+        <article>
+            <p>This is para</p>
+        </article>
+    </div>
+    <div class="purple"> This is div</div>
+    <div id="blue" class="red">This is div</div> <!-- class is ignored because of id -->
+    <a href="https://www.snapchat.com">Go to Snapchat</a>
+
+    <div>
+        <span>This is first span</span>
+        <p>This is second Para</p>
+    </div>
+    <div>
+        <span>This is Span</span>
+    </div>
+</body>
+</html>
