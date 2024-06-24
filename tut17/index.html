@@ -20,6 +20,10 @@
         #blue {
             background-color: blue;
         }
+        /* Attribute Selector */
+        [data-x=a]{
+            color: yellow;
+        }
         /* Child Selector */
         div > p {
             color: white;
@@ -55,6 +59,7 @@
     </style>
 </head>
 <body>
+    <section class="purple" data-x="a">This is a section tag</section>
     <div class="red">
         This is div
         <p>This is para</p> <!-- Decendent Selector overrides child selector   -->
