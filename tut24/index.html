@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows And Outlines</title>
+    <style>
+        .box{
+            border: 2px solid black;
+            padding: 34px;
+            /* box-shadow: h-offset v-offset blur spread color inset; 
+            h-offset and v-offset: Determines the shadow's horizontal and vertical position.
+            blur: The larger the value, the blurrier the shadow.
+            spread: Expands or shrinks the shadow size.
+            color: Defines the shadow color.
+            inset: Makes the shadow inner.
+            */
+            box-shadow: 8px 12px 7px gray;
+        }
+        .text-shadow{
+            color: red;
+            text-shadow: 2px 2px 4px red;
+        }
+        .outline-box{
+            border: 2px solid red;
+            /* outline: width style color; It is outside of border and is not part of box model*/
+            outline: 2px solid blue;
+            outline-offset: 10px;
+            border-radius: 20px;
+            /* Radius of ouline depends on border radius */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">I am a box.</div>
+    <p class="text-shadow">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium cum perferendis fuga.
+    </p>
+    <div class="outline-box">
+        This is another box. Lorem ipsum dolor sit amet consectetur.
+    </div>
+</body>
+</html>
