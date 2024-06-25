@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizing Units</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            border: 2px solid black;
+            background-color: aquamarine;
+            box-sizing: border-box;
+            margin: auto;
+            /* Using px */
+            /* width: 233px; */
+            /* Using Viewport Width(vw) 100vw means full width of user screen */
+            width: 80vw; 
+            height: 10vh; 
+        }
+        .container {
+            border: 2px solid black;
+            background-color: aquamarine;
+            box-sizing: border-box;
+            margin: 10px auto;
+            width: 80vw;
+            height: 70vh; 
+            font-size: 20px;
+        }
+        .container p {
+            /* Em value is multipleid with inherited value of a property and then the computed value is given to child. Here font-size: 2em means 2 x 20px = 40px so 40px will be given to content inside p tag */
+            font-size: 2em;
+        }
+        .container span{
+            /* Rem value is multiplied with inherited value of a property from root element(html) and then the computed value is given to child. Here font-size: 2rem means 2 x 15px(html font size) = 30px so 20px will be given to content inside span tag */
+            font-size: 2rem;
+        }
+        html{
+            font-size: 15px;
+        }
+        .mycont {
+            background-color: red;
+            color: yellow;
+            font-size: 22px;
+            /* width: 100vmin; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        This is a Box
+    </div>
+    <div class="container">
+        Hello
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur iste dolor eius consectetur eaque provident?</p>
+        <span>This is span Lorem ipsum dolor sit amet consectetur adipisicing.</span>
+    </div>
+
+    <div class="mycont">
+        I am another container mycont
+    </div>
+</body>
+</html>
