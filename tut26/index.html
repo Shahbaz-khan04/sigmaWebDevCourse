@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS overflow property</title>
+    <style>
+        .box{
+            width: 20vw;
+            height: 20vh;
+            border: 2px solid black;
+            /*Even when no overflow scroll bar will still show*/
+            /* overflow: scroll; */
+            /*if overflow happens then scroll is applied else no scroll */
+            overflow: auto;
+            /* Others values are   */
+            /* overflow: hidden; */
+            /* overflow: clip; */
+            /* overflow: visible; */
+            /* if x axis becomes overflown and we dont want the overflown content to show, like when we use,  */
+            /* white-space: nowrap; */
+            /* Then we can also use text overflow with overflow: auto*/
+            /* text-overflow: ellipsis; */
+
+            /* We can also handle x and y axis overflow separately */
+            /* overflow-x: hidden;
+            overflow-y: scroll; */
+            /* Or in one line */
+            overflow: hidden auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates excepturi recusandae, aperiam quia optio architecto ipsa quasi ullam assumenda atque, vel autem officia! Nemo mollitia maxime in vitae quo libero officiis officia, exercitationem perferendis, reprehenderit, vero nostrum rerum quis accusantium?
+    </div>
+</body>
+</html>
