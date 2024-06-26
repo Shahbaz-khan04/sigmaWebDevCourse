@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS position Property</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .box {
+        height: 15vh;
+        width: 80vw;
+        margin: 3px;
+        border: 2px solid black;
+      }
+      .box1 {
+        background-color: aqua;
+        /* position: relative;
+        z-index: 1; */
+        /* sticky enables the element to get stuck at a wall when you scroll past it. When we see element in it's original position it will act like static but as you scroll past it it will get stuck to the wall like fixed position and will be vissible further down in webpage too. */
+        /* its visibility is restricted to it's parent size so when we scroll past sticky element it will be shown fixed as long as you are scrolling inside it's parent. But when you scroll past it's parent the sticky element will also get scrolled and will not show any further */
+        /* position: sticky;
+        top: 0px; */
+      }
+      .box2 {
+        background-color: blueviolet;
+        /* relative enables the element to move by setting values such as top, bottom, left, right, z-index but the original space in which it was placed in will still be occupied even when you move it somewhere else. */
+        /* position: relative; */
+        /* top: 34px; */
+        /* bottom: 34px;
+        left: 35px; */
+        /* right: 25px; */
+      }
+      .box3 {
+        background-color: brown;
+        /* absolute enables the element to move by setting values such as top, bottom, left, right, z-index and the original space in which it was placed in will be occupied by the next element and no empty space will be left. */
+        position: absolute;
+        /* In absolute position the top, bottom, left, right properties will be relative to the first parent that i positioned(any position property other than static). So if parent div is positioned then top: 0px will move box3 right after the upper boundary of parent div but if not it will keep searching for positioned parent by checking grandparent nd greatgrandparents etc. */
+        top: 0px;
+      }
+      .box4 {
+        background-color: rgb(247, 223, 191);
+        /* fixed enables the element to move by setting values such as top, bottom, left, right, z-index and the original space in which it was placed in will be occupied by the next element and no empty space will be left. */
+        /* Fixed makes the element stay stuck in a place of screen even when we scroll away. It's like it occupies some space on your webpage and no matter where you are in your webpage it will be shown to you.*/
+        /* position: fixed;
+        bottom: 0px;
+        right: 0px; */
+      }
+      .parent{
+        padding: 10px;
+        margin: 50px 30px;
+        border: 2px solid red;
+        /* To make an element position we can use any position property other than static like use relative, absolute, fixed or sticky */
+        position: relative;
+        /* There are three more exceptions like filter, transform and prespective preoperties also make an element to act as positioned.*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="box box1"></div>
+      <div class="box box2"></div>
+      <div class="box box3"></div>
+      <div class="box box4"></div>
+    </div>
+    <div class="parent">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est fugiat earum perferendis consequatur saepe esse et dignissimos quaerat, id molestias velit exercitationem porro totam quia, rem sint! Exercitationem voluptatem dolorum esse? Autem ullam laudantium aliquam tempora mollitia, officiis magnam sunt voluptatem harum reprehenderit quisquam asperiores ex corrupti debitis commodi inventore odio ducimus similique! Ducimus alias atque corporis harum debitis, ipsa repudiandae, quod eaque ea porro iure nostrum error incidunt ab corrupti cupiditate blanditiis recusandae molestiae perspiciatis itaque minus neque quos. Perspiciatis dicta ex doloremque tenetur et praesentium labore reiciendis nemo eum. Aliquid vitae amet facilis iste minus alias optio fugit veniam vel expedita culpa quasi ex tenetur, nostrum libero placeat cum corrupti non quod distinctio perspiciatis voluptates aliquam quos quis. Harum, fugiat animi eum ut ab consectetur incidunt mollitia labore quasi quos ipsa beatae sint! Voluptatibus odio culpa eveniet optio accusamus quae ut repellat maiores, enim nihil reiciendis quos iste possimus recusandae officia quas, facere alias ab quod. Deserunt eveniet accusantium veritatis odio quisquam quasi explicabo aliquam veniam quidem debitis. In sunt officiis distinctio non rerum aut ipsa eius, cupiditate est veritatis. Deleniti, et! Non modi repellendus eaque aut. Rem officia eveniet eaque vel vero voluptate temporibus aliquam illo iure illum tempore ea quaerat, necessitatibus at. Saepe exercitationem, repellat laborum, blanditiis obcaecati rerum quasi aspernatur assumenda, sequi magni voluptate. Ipsum molestias a cupiditate ad maxime deleniti labore veniam, facilis ullam delectus. Corporis, eius.
+    </div>
+  </body>
+</html>
