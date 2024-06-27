@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise - 03 _ Design This Card</title>
+    <style>
+        body{
+            background-color: rgb(221, 221, 221);
+            font-family: sans-serif;
+            color: rgb(112, 128, 144);
+            font-size: 15px;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .card{
+            width: 25vw;
+            border: 1px solid white;
+            border-radius: 8px;
+            padding: 5px;
+            margin: 10px;
+            background-color: white;
+            box-shadow: 5px 5px 5px rgb(202, 202, 202);
+        }
+        .card-image{
+            border: 2px solid white;
+            box-sizing: border-box;
+            border-radius: 10px;
+            width: 25vw;
+        }
+        .card-tag{
+            border: 1px solid rgb(219, 219, 219);
+            padding: 2px 10px;
+            display: inline-block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            border-radius: 15px;
+        }
+        .card-heading{
+            color: rgb(63, 63, 63);
+            font-size: 25px;
+            margin-left: 9px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+        .card-para{
+            margin-left: 9px;
+            margin-bottom: 20px;
+        }
+        .card-button{
+            padding: 10px 15px;
+            border-radius: 20px;
+            color: rgb(6, 139, 139);
+            font-size: small;
+            font-weight: bold;
+            background-color: rgb(217, 236, 243);
+            border: none;
+            cursor: pointer;
+            display: block;
+            margin: 10px auto;
+        }
+        .card-button:hover{
+            background-color: rgb(195, 228, 240);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7NPq-ydApSxNEEsSc_Cs_FB7BWvw3uJYLZg&s"  class="card-image" alt="Nature Lake Image" />
+        <span class="card-tag">Nature</span>
+        <span class="card-tag">Lake</span>
+        <h2 class="card-heading">Lago di Braies</h2>
+        <p class="card-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore porro quos soluta nobis laborum temporibus ab doloremque neque itaque consequatur?</p>
+        <button class="card-button">Read More</button>
+    </div>
+</body>
+
+</html>
