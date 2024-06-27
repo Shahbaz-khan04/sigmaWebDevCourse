@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS variables</title>
+    <style>
+        /* Making global variables: Variable written in root are global and accessible in all classes */
+        :root{
+            --color: rgb(83, 83, 252);
+            --seccolor: rgb(120, 216, 248);
+            --defpad: 34px;
+            --defop: 0.4;
+            /* We can also store urls, values etc */
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            background-color: var(--color);
+        }
+        .container{
+            background-color: var(--seccolor);
+        }
+        ul li{
+            list-style: none;
+            /* padding: 34px; */
+            padding: var(--defpad);
+            opacity: var(--defop);
+            border: 1px solid var(--seccolor, red);
+        }
+        ul{
+            display: flex;
+        }
+        ul li:first-child{
+            /* Making local Variables: Only accessible within this class */
+            /* --li_color: purple;
+            background-color: var(--li_color); */
+            /* we can also give fall_back color or default color, meaning when setting a color if no color variable is declared than that default color will be applied. */
+            
+            background-color: var(--li_color, yellow);
+            /* default color yellow is applied because there is no color called --wi_color */
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil debitis eaque, consequuntur adipisci enim quod. Maiores provident nihil possimus qui. Iste et, officiis odit quae doloribus in maxime eius doloremque.
+    </div>
+</body>
+</html>
