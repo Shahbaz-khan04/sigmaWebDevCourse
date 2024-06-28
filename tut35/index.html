@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        /* .box:first-child{
+            background-color: aqua;
+        }
+
+        .box::first-line{
+            color: blue;
+        } */
+
+        .boxes *{
+            color: red;
+            border: 2px solid black;
+        }
+
+        [data-color="primary"]{
+            padding-top: 30px;
+        }
+
+        .boxes::before{
+            content: "Hello this element is dynamically added Before with the help of css";
+        }
+        .boxes::after{
+            content: "Hello this element is dynamically added After with the help of css";
+        }
+        .box::after{
+            content: "Added Content";
+            color: blue;
+        }
+        ::selection{
+            background-color: black;
+            color: aqua;
+        }
+
+        .box::first-letter{
+            color: black;
+            font-size: 30px;
+        }
+        input::placeholder{
+            color: teal;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <div data-color="primary" class="boxes">
+        <div class="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet dignissimos consequuntur tempora architecto iure nesciunt voluptate! Ea sint tempore provident quis explicabo quidem voluptatem libero, perferendis praesentium cupiditate aut alias reprehenderit molestias maxime officia velit recusandae? Saepe hic cupiditate, quod numquam nobis, vel veritatis, qui aspernatur necessitatibus totam reprehenderit nesciunt.
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus porro veniam at, voluptatum, rerum obcaecati sint totam autem adipisci neque numquam non quae asperiores vel quod accusantium molestiae quo sapiente.
+        </div>
+        <div class="box">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi distinctio nostrum fuga saepe blanditiis quaerat quam quae iste aut perferendis quos, dignissimos libero sint vitae tempora minus dolorum nihil autem eveniet laudantium maxime minima. Repudiandae ab eius asperiores rerum placeat dolores ratione voluptatem quibusdam omnis corporis qui quae nemo, dicta est, architecto fuga perferendis laborum? Minus quia eveniet necessitatibus omnis?
+        </div>
+    </div>
+    <input type="text" placeholder="Type your name here..">
+</body>
+</html>
