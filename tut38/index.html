@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FlexBox</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            display: flex;
+            height: 80vh;
+            /*For main axis allignment */
+            /* justify-content: center; */
+            /* For giving unifom spacing between, start and end of items */
+            /* justify-content: space-around; */
+            /* For giving unifom spacing between items */
+            /* justify-content: space-between; */
+            /*For cross axis allignment */
+            /* align-items: center; */
+            /* To change default direction of flex. There are two axis in flex, main axis and cross axis. Main axis is the one where direction of flex is and cross axis is the opposite direction. Ex: if flex-direction: column; then main axis will be y axis and cross axis will be x axis. justify content and align items interchange thier behaviour if we change flex directon from row to column or from column to row*/
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse; */
+            /* flex-direction: row-reverse; */
+            /* To avoid overflow of items flex wrap automatically shifts remining items to next line */
+            /* flex-wrap: wrap; */
+            /* flex-wrap: wrap-reverse; */
+            /* Align content and align items are same but align content is used when items are in more than one line */
+            /* align-content: center; */
+            /* 'flex-flow' property is a shorthand property for setting both the 'flex-direction' and 'flex-wrap' properties */
+            /* flex-flow: row wrap; */
+            /* Gap property */
+            /* row-gap: 10px;
+            column-gap: 20px; */
+            /* Setting row and column gap together */
+            /* gap: 10px 20px;  */
+        }
+        .items{
+            height: 22px;
+            width: 22px;
+            border: 2px solid black;
+            /* margin:2px; */
+            background-color: blueviolet;
+            /* This makes every item take 1 part of total width of container. so by doing this items take full width of container by dividing width equally among themselves*/
+            /* flex-grow: 1; */
+        }
+        /* Default order of every item is 0. */
+        .order1{
+            order: 1;
+        }
+        .order2{
+            order: 2;
+        }
+        .order3{
+            order: 3;
+        }
+
+        .item1{
+            /* This make the width of this item 3 times of others */
+            /* flex-grow: 1; */
+            /* The speed at which this item will shrink, 0 make it unshrinkable beyond the original width given to the item */
+            flex-shrink: 0;
+            /* For cross axis alignment of a single item */
+            /* align-self: center; */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="items item1">1</div>
+            <div class="items order1">300</div>
+            <div class="items">4</div>
+            <div class="items order2">200</div>
+            <div class="items">1</div>
+            <div class="items order3">100</div>
+            <div class="items">1</div>
+            <div class="items  order3">40</div>
+    </main>
+</body>
+</html>
