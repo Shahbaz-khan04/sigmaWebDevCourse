@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise - 06, Design this Nav bar using Flexbox</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            font-family: "Open Sans", sans-serif;
+        }
+        header{
+            max-width: 85vw;
+            margin: 20px auto;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .options ul{
+            display: flex;
+            list-style: none;
+            column-gap: 20px;
+        }
+        .options ul li{
+            display: flex;
+            column-gap: 5px;
+            align-items: center;
+            cursor: pointer;
+            color: rgb(26, 26, 26);
+            transition: color 0.5s;
+        }
+        .options ul li:hover{
+            color: rgb(83, 83, 83);
+        }
+        .logo{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img width="170" src="logo.webp" alt="Logo">
+            </div>
+            <div class="options">
+                <ul>
+                    <li>Products <img width="15px" src="dropdown2.png"></li>
+                    <li>Pricing <img width="15px" src="dropdown2.png"></li>
+                    <li>Resources <img width="15px" src="dropdown2.png"></li>
+                    <li>About us <img width="15px" src="dropdown2.png"></li>
+                    <li>Security and compliance</li>
+                    <li><img src="translate-icon2.png" alt="Translate Icon"></li>
+                </ul>
+            </div>             
+        </nav>
+    </header>
+    
+</body>
+</html>
