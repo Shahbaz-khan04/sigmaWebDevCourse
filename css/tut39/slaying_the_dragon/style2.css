@@ -1,0 +1,51 @@
+.container{
+    display: grid;
+    /* grid-template-rows: 100px 100px 100px 100px 100px 100px;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px; */
+    /* grid-template-rows: 100px 100px; */
+    /* grid-template-rows: repeat(2, 100px);
+    grid-template-columns: 100px minmax(100px, 3fr) 1fr;
+    grid-gap: 1em 3em; */
+    /* grid-template-rows: 100px 300px 100px;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+     'header header'
+     'main aside'
+     'footer footer'; */
+    /* We have created below grid, now when we reduce screen size too much item gets overflowed to counter this without using media query we can add auto-fit keyword */
+    grid-template-rows: repeat(4, 100px);
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    /* When we add items to a fully occupied grid an implicit row is created to accomodate that item. in this case we added item 5. But the implicit row does not inherit the area of other rows. To counter this and define area of implicit rows we can do it like  */
+    /* grid-auto-rows: 100px; */
+    /* Defaultly grid creates implicit rows for extra items but we can change it to columns too */
+    /* grid-auto-flow: column;
+    grid-auto-columns: 100px; */
+}
+.item-1{
+    /* grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    z-index: 1; */
+    /* grid-area: header; */
+}
+.item-2{
+    /* grid-row: 1 / 3;
+    grid-column: 5 / 7; */
+    /* Span says the point where this item is starting at occupy two columns and rows. But downfall is if i increase size of item 1 to grid-column: 1 / 6; item 2 will get pushed down whereas when i explicitly define grid-row and grid-column property item 2 will remain in its position and item 1 will get overlapped by item 2*/
+    /* grid-row: span 2;
+    grid-column: span 2; */
+    /* grid-area: main; */
+}
+.item-3{
+    /* grid-area: row-start / col start / row-end / col-end; */
+    /* grid-area: 3 / 1 / 7 / 7; */
+    /* grid-area: aside; */
+}
+
+.item-4{
+    /* Layering item 4 on top of item 1, 2, 3. If  i want some item to be displayed over it or if this item is overlayered by anoter item i can specify z-index: 1; for the over layered item like when i increase z index of item 1 it gets over layered on top of item 4.*/
+    /* grid-area: 2 / 4 / 4 / 6; */
+    /* grid-area: footer; */
+}
+
